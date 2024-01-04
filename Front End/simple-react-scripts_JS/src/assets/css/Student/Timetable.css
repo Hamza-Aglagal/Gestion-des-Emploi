@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info: #7d8da1;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-varient: #677483;
+    --color-background: #f6f6f9;
+    
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --box-shadow: 0 2rem 3rem var(--color-light)    
+}
+
+
+.MaineTimeTable .timetable{
+    padding-left: 11rem;
+}
+
+.MaineTimeTable .timetable h2{
+    margin-bottom: .8rem;
+}
+.MaineTimeTable .timetable table{
+    background-color: var(--color-white);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+.MaineTimeTable .timetable span{display: none;}
+.MaineTimeTable .timetable table:hover{box-shadow: none;}
+.MaineTimeTable main table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-varient);
+}
+.MaineTimeTable main table tbody tr:last-child td{border: none;}
+
+.MaineTimeTable .timetable.active{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.MaineTimeTable .timetable.active h2{
+    color: var(--color-dark);
+}
+.MaineTimeTable .timetable.active table{
+    width: 90%;
+    max-width: 1000px;
+    position: relative;
+}
+.MaineTimeTable .timetable.active span{
+    display: block;
+    font-size: 2rem;
+    color: var(--color-dark);
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width: 768px){
+    .MaineTimeTable{font-size: 10px;}
+
+    .MaineTimeTable{padding: 0 2rem;}
+    .MaineTimeTable .timetable{
+        position: relative;
+        margin: 3rem 0 0 0;
+        width: 100%;
+    }
+    .MaineTimeTable .timetable table{
+        width: 100%;
+        margin: 0;
+    }
+
+}
+

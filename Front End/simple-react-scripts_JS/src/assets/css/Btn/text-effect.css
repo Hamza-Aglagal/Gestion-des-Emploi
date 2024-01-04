@@ -1,0 +1,28 @@
+
+
+.underlined {
+/*   background: red; */
+  position: relative;
+  font-size: clamp(1rem, 2vmin, 2rem);
+  font-family: sans-serif;
+  color: hsl(130 80% 50%);
+  font-weight: bolder;
+}
+
+
+
+
+
+.underline-clip:after {
+  content: '';
+  position: absolute;
+  top: 95%;
+  width: 150%;
+  aspect-ratio: 3 / 1;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  border: 6px solid hsl(130 80% 50%);
+  /* Use a clip-path to hide and show the bits you want */
+  clip-path: polygon(0 0, 50% 50%, 100% 0);
+}

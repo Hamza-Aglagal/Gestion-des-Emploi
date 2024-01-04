@@ -1,0 +1,91 @@
+.wrap {
+    /* border: red solid 1px; */
+    /* height: 100%; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    margin-left: 7rem;
+    margin-top: 3rem;
+}
+
+.wrap .button {
+    min-width: 200px;
+    min-height: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 19px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    /* color: #313133; */
+    color: white;
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgb(224, 147, 14) 0%, rgb(209, 192, 79) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+}
+
+.wrap button::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(200px + 12px);
+    min-height: calc(50px + 12px);
+    border: 6px solid #ffb300;
+    box-shadow: 0 0 60px rgba(255, 162, 0, 0.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+
+.wrap .button:hover,
+.wrap .button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+}
+
+.wrap button:hover::before,
+.wrap button:focus::before {
+    opacity: 1;
+}
+
+.wrap button::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid #ffaa00;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+
+.wrap button:hover::after,
+.wrap button:focus::after {
+    animation: none;
+    display: none;
+}
+
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 150px;
+        height: 150px;
+        opacity: 0;
+    }
+}
